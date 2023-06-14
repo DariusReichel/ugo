@@ -486,6 +486,14 @@ func ConvertStructToJson(data interface{}) (string, error) {
 	}
 	return string(dataMarshalled), nil
 }
+func ConvertStructToJson2(data interface{}) (string, error) {
+	dataMarshalled, err := json.Marshal(data)
+	if err != nil {
+		return "", err
+	}
+	return string(dataMarshalled), nil
+}
+
 func ConvertInterfaceToType(dataType string, data interface{}) (interface{}, error) {
 	switch dataType {
 	case "bool":
