@@ -479,7 +479,7 @@ func ConvertInterfaceToInt(value interface{}) int {
 		return 0
 	}
 }
-func ConvertStructToJson(data struct{}) (string, error) {
+func ConvertStructToJson(data interface{}) (string, error) {
 	dataMarshalled, err := json.Marshal(data)
 	if err != nil {
 		return "", err
